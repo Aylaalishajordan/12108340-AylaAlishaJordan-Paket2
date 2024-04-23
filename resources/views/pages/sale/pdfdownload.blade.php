@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Invoice</title>
+    <title>Struk</title>
     <style>
         #back-wrap {
             margin: 30px auto 0 30px;
@@ -89,7 +89,7 @@
     </div>
     <div id="receipt">
         <center id="top">
-            <h2>Cashier</h2>
+            <h2>Struk</h2>
         </center>
         <div id="mid">
             <div class="info">
@@ -161,7 +161,7 @@
             </div>
             <div id="legalcopy">
                 <center>
-                    <p class="legal"><strong>Thank You!</strong></p>
+                    <p class="legal"><strong>Terima Kasih telah berbelanja ditoko kami!</strong></p>
                 </center>
             </div>
         </div>

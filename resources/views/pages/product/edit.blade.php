@@ -32,11 +32,11 @@
                                         Please fill in your price
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label for="image">Image</label>
                                     <input type="image" class="form-control" name="image" id="image"
-                                        value="{{ $product->image }}">
-                                        <td><img src="{{ asset('images/' . $product->image) }}" width="50"></td>
+                                        value="{{ $product->image }}"> --}}
+                                        {{-- <td><img src="{{ asset('images/' . $product->image) }}" width="50"></td> --}}
                                     {{-- <div class="invalid-feedback">
                                         Please fill in your image
                                     </div> --}}

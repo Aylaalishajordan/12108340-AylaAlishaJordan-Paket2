@@ -89,7 +89,7 @@
     </div>
     <div id="receipt">
         <center id="top">
-            <h2>Cashier</h2>
+            <h2>Struk</h2>
         </center>
         <div id="mid">
             <div class="info">
@@ -141,7 +141,7 @@
             </div>
             <div id="legalcopy">
                 <center>
-                    <p class="legal"><strong>Thank You!</strong></p>
+                    <p class="legal"><strong>Terima Kasih telah berbelanja ditoko kami!</strong></p>
                 </center>
             </div>
         </div>

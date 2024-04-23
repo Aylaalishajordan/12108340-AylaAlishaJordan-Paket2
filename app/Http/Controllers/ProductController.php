@@ -10,6 +10,14 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+        $products = Product::where('name', 'LIKE', "%" . $keyword . "%")->paginate(5);
+        return view('pages.product.index', compact('products'))->with('i', (request()->input('page', 1) -1) * 5);
+    }
+
     public function index()
     {
         $products = Product::all();

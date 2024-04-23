@@ -24,6 +24,12 @@ Route::middleware("isLogin")->group(function () {
         return view('pages.dashboard');
     })->name('dashboard');
 
+
+    Route::get('/search/product', [ProductController::class, 'search'])->name('search-product');
+    Route::get('/search', [SaleController::class, 'search'])->name('search-sale');
+
+
+
     Route::middleware("isAdmin")->group(function () {
         // User
         Route::get("/dashboard/user", [UserController::class, "index"])->name("user");
@@ -41,6 +47,7 @@ Route::middleware("isLogin")->group(function () {
 
     // Sale
     Route::get("/dashboard/sale", [SaleController::class, "index"])->name("sale");
+    // Route::get("/dashboard/sale/search", [SaleController::class, "search"])->name("sale.search");
     Route::get("/dashboard/sale/export", [SaleController::class, "export"])->name("export");
     Route::get("/dashboard/sale/pdf", [SaleController::class, "pdf"])->name("pdf");
     Route::get("/dashboard/sale/download/{id}", [SaleController::class, "download"])->name("sale.download");

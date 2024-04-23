@@ -14,6 +14,13 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class SaleController extends Controller
 {
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+        $sales = Sale::where('total_price', 'LIKE', "%" . $keyword . "%")->paginate(5);
+        return view('pages.sale.index', compact('sales'))->with('i', ($request->input('page', 1) - 1) * 5);
+    }
+
     public function invoice(Request $request)
     {
         $data = session(["data" => $request->all()]);
@@ -208,12 +215,26 @@ class SaleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+    // public function destroy($id)
+    // {
+    //     $sale = Sale::find($id);
+    //     $sale->delete();
+    //     return redirect()->route('sale')->with("success", "Data deleted successfully");
+    // }
+
     public function destroy($id)
     {
+        // Hapus detail penjualan terlebih dahulu
+        DetailSale::where('sale_id', $id)->delete();
+
+        // Hapus penjualan
         $sale = Sale::find($id);
         $sale->delete();
+
         return redirect()->route('sale')->with("success", "Data deleted successfully");
     }
+
+
 
     public function updateStock(Request $request, $id)
     {

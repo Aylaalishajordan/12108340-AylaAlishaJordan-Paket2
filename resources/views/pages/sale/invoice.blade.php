@@ -3,7 +3,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            Invoice
+            Struk
         </div>
         @if (session('error'))
             <div class="alert alert-danger alert-dismissible show fade">
@@ -45,7 +45,7 @@
                     @endforeach
                 </tbody>
             </table>
-            <div class="mb-3">Total Price: Rp {{ number_format($totalPrice) }}</div>
+            <div class="mb-3">Total Price = Rp {{ number_format($totalPrice) }}</div>
             <div class="d-flex justify-content-between">
                 <div>
                     <form action="{{ route('sale.store') }}" method="post" class="d-flex justify-content-end w-full">

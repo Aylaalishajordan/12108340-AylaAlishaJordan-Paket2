@@ -4,8 +4,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-                    <div class="register-brand">
-                      {{-- <img src="../assets/img/logos/favicon.png" alt="logo" width="50"> --}}
+                    <div class="login-brand">
                       <h3>Register</h3>
                     </div>
                     <div class="card card-primary">
@@ -15,7 +14,7 @@
                             <form class="needs-validation" method="POST" action="{{ route('auth.register') }}">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="name">name</label>
+                                    <label for="name">nama</label>
                                     <input type="text" class="form-control" name="name" id="name" required>
                                     <div class="invalid-feedback">
                                         Please fill in your name
